@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+function  factorial(x){
+    if(x==0){
+        return 1;
+    }
+    else{
+        return x*factorial(x-1);
+    }
+}
+const num=prompt("Enter a positive number: ");
+if(num>=0){
+    const result=factorial(num);
+    document.write("The factorial of " +num +" is: " + result);
+    }
+else{
+    document.write("Enter a positive number");
+
+}
+
+
+
+
+</script>
+</body>
+</html>
