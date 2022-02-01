@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body><script>
+let user=new Object();//prazen ovjekt
+// new user={};
+user={
+    name:"John",
+    age:30,
+    "likes running":true
+}
+//didavanje atribut vo objekt
+user.isAdmin=true;
+//brisenje svojstvo delete user.age
+user["likes running"]=false;
+//do objekti se pristapuva ili so tocka ili so aglesti zagradi koa ima specijalni znaci
+let fruit="apple";
+let bag={
+    [fruit]:5//dinamicki dodeleno
+}
+let key="age";
+//pristap do objektot bag.apple
+//izminuvanje
+//za user da proverime dali ja ima promenlivata key kako propety vo objektot
+//key in user//ova brakja true ili false,dali vrednosta se pojavuva kako svojstvo
+for (let key in user){
+    //ni gi dava imeto na propeties name,age
+}
+
+// za john ,30 da ispecati
+user[key] //for for ciklusot se pisuvae
+//METODI
+let us={
+    name:"jOHN",
+    sayHi:function (){
+        return `${this.name}+ ${this.age}`;
+    }
+}
+user.sayHi();
+
+</script>
+</body>
+</html>
+
+
+
+
+

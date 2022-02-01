@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="vrednost" style="background-color: purple;color:peru;width: 260px;height: 260px; ">
+
+</div>
+<p id="para"></p>
+<button id="click" onclick="click()">Click Me</button>
+<script>
+    function myFun() {
+        document.getElementById("para").innerHTML = Math.random();
+    }
+    document.getElementById("vrednost").addEventListener("mousemove",myFun);
+
+function click(){
+    document.getElementById("vrednost").removeEventListener("mousemove",myFun);}
+</script>
+</body>
+</html>

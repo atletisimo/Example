@@ -1,0 +1,89 @@
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Zadaca 1</title>
+    <script type="text/javascript">
+        function updateTable() {
+            var studenti = [];
+            var ime = document.getElementById("ime").value;
+            var prezime = document.getElementById("prezime").value;
+            var indeks = document.getElementById("indeks").value;
+            var predmet = document.getElementById("predmet").value;
+            var ocena = document.getElementById("ocena").value;
+            if(ime != "" && prezime != "" && indeks != "" && predmet != "") {
+                var obj = {fname: ime, lname: prezime, index: indeks, subject: predmet, grade:ocena, display: function() {
+                        return "<tr><td>" + this.fname + "</td><td>" + this.lname + "</td><td>" + this.index + "</td><td>" + this.subject + "</td><td>" + this.grade + "</td></tr>";
+                    }};
+                studenti.push(obj);
+                if(studenti.length != 0) {
+                    var tabela = document.getElementById("studenti");
+                    tabela.style.display = "table";
+                    for(var i = 0; i < studenti.length; ++i) {
+                        tabela.innerHTML = tabela.innerHTML + studenti[i].display();
+                    }
+                    document.getElementById("forma").reset();
+                }
+                return false;
+            } else
+                return false;
+        }
+    </script>
+</head>
+<body>
+<form onsubmit="return updateTable()" method="POST" id="forma">
+    <table width="400" border="0" cellpadding="2" cellspacing="2">
+        <tr>
+            <th colspan="2"><h1>Форма за внесување оцени</h1></th>
+        </tr>
+        <tr>
+            <td>Име: </td>
+            <td><input type="text" id="ime" name="ime" size="20" /></td>
+        </tr>
+        <tr>
+            <td>Презиме: </td>
+            <td><input type="text" id="prezime" name="prezime" size="20" /></td>
+        </tr>
+        <tr>
+            <td>Индекс: </td>
+            <td><input type="text" id="indeks" name="indeks" size="20" /></td>
+        </tr>
+        <tr>
+            <td>Предмет: </td>
+            <td><input type="text" id="predmet" name="predmet" size="20" /></td>
+        </tr>
+        <tr>
+            <td>Оцена: </td>
+            <td>
+                <select name="ocena" id="ocena" style="width:173px">
+                    <option value="5 (пет)">5 (пет)</option>
+                    <option value="6 (шест)">6 (шест)</option>
+                    <option value="7 (седум)">7 (седум)</option>
+                    <option value="8 (осум)">8 (осум)</option>
+                    <option value="9 (девет)">9 (девет)</option>
+                    <option value="10 (десет)">10 (десет)</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><input type="submit" value="Внеси" /></td>
+        </tr>
+        <tr>
+            <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table width="100%" cellpadding="1" cellspacing="1" border="2" style="display:none;" id="studenti">
+                    <tr>
+                        <th>Име</th>
+                        <th>Презиме</th>
+                        <th>Индекс</th>
+                        <th>Предмет</th>
+                        <th>Оцена</th>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

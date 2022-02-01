@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var osnova=prompt("Vnesi osnova:");
+    var eksponent=prompt("Vnesi eksponent");
+    osnova=parseFloat(osnova);//realen broj
+    eksponent=parseInt(eksponent)
+    if(!isNaN(osnova)&& !isNaN(eksponent)){
+
+        var rezultat=1//ili osnova i ke bide od 1
+        for(i=0;i<eksponent;i++){
+            rezultat*=osnova
+        }
+        document.write(rezultat)
+    } else{
+        document.write("Nepavilen vlez");
+    }
+
+
+
+</script>
+</body>
+</html>

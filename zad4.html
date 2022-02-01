@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadaca 4</title>
+    <script src="zad4.js"></script>
+</head>
+<body>
+<h2>Собирање два комплексни броеви</h2>
+<form action="" method="post" id="forma">
+    <table>
+        <tr>
+            <td>
+                <input type="text" id="cmp1r"/>
+            </td>
+            <td>
+                <input type="text" id="cmp1i"/><i>i</i>
+            </td>
+        </tr>
+        <tr> <p></p></tr>
+        <tr>
+            <td>
+                <input type="text" id="cmp2r"/>
+            </td>
+            <td>
+                <input type="text" id="cmp2i"/><i>i</i>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="Add" onclick="suma()" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="sumar"/>
+            </td>
+            <td>
+                <input type="text" id="sumai"/><i>i</i>
+        </tr>
+    </table>
+</form>
+<script>
+    function suma()
+    {
+        var realen1=parseInt(document.getElementById("cmp1r").value);
+        var realen2=parseInt(document.getElementById("cmp2r").value);
+        var imag1=parseInt(document.getElementById("cmp1i").value);
+        var imag2=parseInt(document.getElementById("cmp2i").value);
+        var suma1;
+        suma1=realen1+realen2;
+        var suma2=imag1+imag2;
+        document.getElementById("sumar").value=suma1;
+        document.getElementById("sumai").value=suma2;
+        return false;
+    }
+    //window.onload=document.getElementById("forma").onsubmit=suma;
+</script>
+</body>
+</html>

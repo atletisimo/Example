@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function printSumSimple(mat,k)
+    {
+        // k must be smaller than or
+        // equal to n
+       n=mat.length;
+        if (k > n) return;
+let br=0;
+        // row number of first cell in
+        // current sub-square of size k x k
+        for (let i = 0; i < n-k+1; i++)
+        {
+
+            // column of first cell in current
+            // sub-square of size k x k
+            for (let j = 0; j < n-k+1; j++)
+            {
+
+                // Calculate and print sum of
+                // current sub-square
+
+                        br++;
+
+                document.write(br+ " ");
+            }
+
+            // Line separator for sub-squares
+            // starting with next row
+            document.write("<br>");
+        }
+    }
+
+    // Driver Program to test above function
+    let mat= [[1, 2, 1],
+        [2, 2, 2],
+        [2, 2, 2],
+        [1, 2, 3],
+        [2, 2, 1]];
+    let k = 2;
+    printSumSimple(mat, k);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    function addRow(){
+        var fname=document.getElementById('fname').value;
+        var lname=document.getElementById('lname').value;
+        var age=document.getElementById("age").value;
+   var table=document.getElementsByTagName('table')[0];
+        var newRow=table.insertRow(table.rows.length);//najodozdola da dodava elementi t.e redica
+        //ako bese insertRow(0) najodozgora ke gi dodavase elementite
+        var cel1=newRow.insertCell(0);
+        var cel2=newRow.insertCell(1);
+        var cel3=newRow.insertCell(2);
+        var cel4=newRow.insertCell(3);
+
+        cel1.innerHTML=fname;
+        cel2.innerHTML=lname;
+        cel3.innerHTML=age;
+cel4.innerHTML="hello";
+
+
+    }
+
+</script>
+
+
+First Name:<input type="text" name="fname" id="fname"><br>
+<br>
+Last Name: <input type="text" name="lname" id="lname"><br>
+<br>
+Age:<input type="text" name="age" id="age"> <br><br>
+<button onclick="addRow()">Add Row</button>
+<table border="1">
+<tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Age</th>
+</tr>
+
+    <tr>
+        <td>Tamara</td>
+        <td>Ackovska</td>
+        <td>25</td>
+    </tr>
+
+
+    <tr>
+        <td>Nina</td>
+        <td>Siderova</td>
+        <td>23</td>
+    </tr>
+
+
+    <tr>
+        <td>Sara</td>
+        <td>Bojanovska</td>
+        <td>21</td>
+    </tr>
+
+
+    <tr>
+        <td>Shakira</td>
+        <td>Mubarek</td>
+        <td>35</td>
+    </tr>
+
+
+    <tr>
+        <td>Marianela</td>
+        <td>Esperansa</td>
+        <td>21</td>
+
+    </tr>
+
+</table>
+</body>
+</html>

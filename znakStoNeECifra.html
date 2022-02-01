@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+
+var br=prompt("Vnesi br")
+br=parseInt(br)
+if(!isNaN(br)){
+    max=br;
+}
+else {
+    max = 0//ako stavime da e ednakov na br nema da pomine parsiranjeto
+    alert("Ne vnese nitu eden br")
+}
+while(!NaN(br)) {
+    if (br > max) {
+        max = br
+    }
+    br = prompt("Vnesi go br")
+    br = parseInt(br)
+}
+document.write(br)
+</script>
+</body>
+</html>
