@@ -1,0 +1,81 @@
+<html>
+<body>
+<p>Ime:</p>
+<input type="text" id="name">
+<p>Prezime:</p>
+<input type="text" id="surname">
+<p>EMBG:</p>
+<input type="text" id="embg">
+<div>
+    <button onclick="add()">Dodadi</button>
+</div>
+<table border="1px solid black" id="students_table">
+
+</table>
+
+<script>
+
+    function add() {
+        var name = document.getElementById("name")
+        name = name.value
+        var surname = document.getElementById("surname")
+        surname = surname.value
+        var embg = document.getElementById("embg")
+        embg = embg.value
+        if (!name || !surname || !embg){
+            alert("Ne pravilno vneseni podatoci")
+            return
+        }else{
+            var datum = checkEMBG(embg)
+            if(!datum){
+                alert("Ne pravilen matichen broj")
+                return
+            }
+        }
+        var table = document.getElementById("students_table")
+        var row = table.insertRow()
+        var cell = row.insertCell()
+        cell.innerHTML = name
+        var cell1 = row.insertCell()
+        cell1.innerHTML = "<button onclick='remove(this)'>Remove</button>"
+    }
+
+    function checkEMBG(embg) {
+        if (embg.length != 13){
+            return false
+        }
+        var broj = parseInt(embg)
+        if (isNaN(broj)){
+            return false
+        }
+        var den = Math.floor(broj/100000000000)
+        var mesec = Math.floor((broj/1000000000)%100)
+        var year = 1000+Math.floor((broj/1000000)%1000)
+        console.log(den)
+        console.log(mesec)
+        console.log(year)
+        if((mesec>=1 && mesec<=12) && (den>=1 && den<=31)){
+            return (den+"."+mesec+"."+year)
+        }
+        return false
+    }
+
+    function remove(element) {
+        var td = element.getElementsByTagName("td")
+
+        var div_removed = document.getElementById("div")
+        div_removed.innerHTML += td[0].innerHTML
+    }
+
+    // 13 brojki
+    // ddmmyyyxxyyqq
+
+
+
+</script>
+
+
+
+
+
+</body>

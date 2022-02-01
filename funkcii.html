@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   // function sum(a,b){
+   //     return a+b;
+   // }
+   // document.write(sum(3,4));//function call
+   // function poraka(){
+    //    document.write("<stong>\nHello i am a message</stong>");
+   // }
+    //poraka();
+   //klasicna f-ja arrow f-ja
+   //let method=(x)=>{//x e argumentoto
+   //...code
+   //return x*x
+   //};
+    function hipo(a,b){
+        let square=function (x){//ja stavame ovaa druga f-ja vo promenliva
+            return x*x;
+        };
+        return Math.sqrt(square(a)+square(b));
+    }
+    let res=hipo(10,20);
+    document.write(res);
+    //druga sintaksa za f-ja
+   (function(x){
+       return x*10;
+   })(10);
+   let n=10;//globalna proenliva za generate
+    function generate(a){
+        var a =0;
+        function counter(){
+            a=a+1;
+            return a;
+        }
+        return counter();
+    }
+
+</script>
+</body>
+</html>

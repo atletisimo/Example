@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Select color:
+<select id="my">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+
+</select>
+<button onclick="count();">Count options</button>
+<script>
+    function count(){
+let select=document.getElementById("my");
+//select.childElementCount
+//select.children.length
+document.write(select.options.length);}
+</script>
+</body>
+</html>
