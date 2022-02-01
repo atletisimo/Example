@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    var broj=prompt("Vnesi broj")
+    broj=parseInt(broj)
+    d3=0
+    d3_1=0
+    d3_2=0//delivi so 3 ostatok 2
+    while(!isNaN(broj)){//nema vo while ni da vleze dokolku vneseme nesto sto ne e broj
+        //ako vleze vo while znaci bojot e validen
+        if(broj%3==0){
+            d3++;
+        }else if(broj%3==1){
+            d3_1++;
+        }
+        else d3_2++;
+
+    }
+broj=prompt("Vnesi go br")
+    broj=parseInt(broj)
+    document.write("Delivi so 3"+d3)
+    document.write("Delivi so 3 ostatok 1 "+d3_1)
+    document.write("Delivi so 3 ostatok 2"+d3_2)
+
+</script>
+</body>
+</html>

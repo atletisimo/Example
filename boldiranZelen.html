@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="#" onmouseover="mouseIsOver();" onmouseout="mouseIsOut();">hover here</a>
+<p>Nekoj text<strong>Nekoj drug text </strong>itn <strong> povtorno boldiran </strong></p>
+
+<script>
+    function mouseIsOver(){
+        let strong=document.getElementsByTagName("strong");
+       for(let i=0;i<strong.length;i++){
+           strong[i].style.backgroundColor="green";
+       }
+
+    }
+    function mouseIsOut() {
+        let strong = document.getElementsByTagName("strong");
+        for (let i = 0; i < strong.length; i++) {
+            strong[i].style.backgroundColor = "white";
+        }
+    }
+</script>
+</body>
+</html>

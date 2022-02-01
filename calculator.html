@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id='div'style="width:200px;height:300px ;background: yellowgreen">
+
+</div>
+<p id="rez" style="color:pink;font-size:54px">
+
+</p>
+<script>
+    var operator=prompt("Enter operator: + , - , * , /");
+    var num1=prompt("Enter first num: ");
+    var num2=prompt("Enter second num: ");
+    num1=parseInt(num1);
+    num2=parseInt(num2);
+
+    let result;
+
+    if(operator == '+'){
+        result=num1+num2;
+    }
+    if(operator == '-'){
+        result=num1-num2;
+    }
+    if(operator == '*'){
+        result=num1*num2;
+    }
+    if(operator == '/'){
+        result=num1/num2;
+    }
+var x=document.getElementById('div').innerHTML=result;
+    document.getElementById("rez").innerHTML=x;
+</script>
+</body>
+</html>

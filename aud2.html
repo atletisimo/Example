@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //var answer=confirm("Dali sakate da prodolzite?");
+    //document.write(answer);
+    //var odgovor=prompt("Vnesete vrednost 1 \n,Vnesete vrednost2\n","12345");
+    //document.write(odgovor);
+    var a=prompt("Vnesi go broj1");
+    var b=prompt("Vnesi go broj2");
+    a=parseInt(a);
+    b=parseInt(b);
+    //dali imaat promenlivite pravilni vrednosti
+    if(!isNaN(a) && !isNaN(b)){//se dobiva vrednost NaN ako nemoze da se parsira vrednosta
+        //samo nekoi tekstualni nizi moze da se parsiraat vo broj
+    document.write(a+b);
+    if(a>b){
+        document.write(a);
+    }
+    else{
+        document.write(b);}
+    else{
+        document.write("Nepravilen vlez");
+    }
+
+
+
+</script>
+</body>
+</html>

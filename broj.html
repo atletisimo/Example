@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="negative"></p>
+<p id="positive"></p>
+<p id="zero"></p>
+<style>
+    .klasa{
+        width:200px;
+        height: 300px;
+    }
+</style>
+<script>
+    let num=prompt("Enter a number");
+    if (num==0){
+       document.getElementById("zero").innerText=("The number is zero")
+        document.getElementById('zero').style.background='blue';
+
+    }
+else if(num>0){
+        document.getElementById("positive").innerText=("The number is positive")
+        document.getElementById("positive").style.background='green';
+    }
+else
+    {
+        document.getElementById("negative").innerText=("The number is negative")
+        document.getElementById('negative').style.background='red';
+    }
+
+</script>
+</body>
+</html>

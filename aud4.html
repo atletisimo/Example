@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="p1">Hello i am paragraph</p>
+<p id="p2">Hello i am p2</p>
+<button onclick="change()" >Change Me</button>
+<script>
+    function change(){
+        let p=document.getElementById("p1");
+        //let ps=document.getElementsByTagName("p");
+        //for(i=0;i<ps.length;i++)
+         //   ps[i].style.backgroundColor:"red";
+        p.style.color="red";
+        p.style.font="20px";
+        p.style.fontFamily="Helvetica";
+        let p2=document.getElementById("p2");
+        p2.style.backgroundColor="red";
+    }
+</script>
+</body>
+</html>
