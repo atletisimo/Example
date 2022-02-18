@@ -1,21 +1,17 @@
-let frutas=["manzana","platano","para"];
-//for (let i=0;i<frutas.length;i++){
-    //document.write(i);//gi pecati indeksite
-  //  document.write(frutas[i]+ ",");
-let ime="Tamara";
-//for of za elementite vo nizata
-for(let fruta of frutas){//funkcionira samo za stringovi i arrays tie se ,objeto literal =objeto cuyas propiedades estan declaradas textualmente en el codigo
-    document.write(fruta+ ",");//manzana,platano,para,
+var arr=[1,2,3];
+arr2=[...arr,5,...arr];
+document.write(arr2);//1,2,3,5,1,2,3
+document.write("<br>"+arr);
+arr2.splice(0,2)//menuva sodrzina na dadena niza,ne kreira nova tuku na dadenata 
+//od nulta pozicija da izbriseme 2 elementi
+document.write("<br>"+arr2);
+arr3=[1,2,3,4,5,6,7,8,9,10];
+arr3.splice(2,4,"Nina");
+document.write("<br>"+arr3);//1,2,Nina,7,8,9,10
+document.write("<br>"+arr3.indexOf("Nina"));//2
 
-}
-//for(let bukva of ime){
- //   document.write(bukva)//celoto ime ke go pecati
-//}
-for (let i=0;i<ime.length;i++) {
-    document.write("<br>"+ime[i]);//bukva po bukva
-}
-//for in za indeksi
-for(let a in ime){
-    document.write(a);//indeksite ke gi pecati
-    document.write(ime);//ke go pecati imeto kolku sto ima indeksi
-}
+document.write("<br>"+arr3.slice(1,4));
+document.write("<br>"+arr3.join("-"));
+
+document.write("<br>"+arr3.find(element=>element>4));
+
